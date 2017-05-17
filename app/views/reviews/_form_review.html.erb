@@ -1,0 +1,5 @@
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, wrapper_html: {class: 'form-group'}, input_html: {class: 'form-control'} %>
+  <%= f.input :rating, as: :integer, wrapper_html: {class: 'form-group'}, input_html: {class: 'form-control'}, collection: (0..5).to_a %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
